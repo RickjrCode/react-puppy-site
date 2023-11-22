@@ -1,0 +1,74 @@
+#players-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.player-card:hover {
+  background-color: #333;
+  color: white;
+  transform: scale(1.06);
+  transition: all 0.93s ease;
+}
+
+.player-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.single-play-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#single-player {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#single-player img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.players-button {
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  border: 2px solid #0f172a;
+  box-shadow: 2px 2px 0 0 white, 4px 4px 0 0 #0f172a;
+  transition-duration: 200ms;
+}
+
+.players-button:hover {
+  box-shadow: 3px 3px white, 6px 6px 0 0 #0f172a;
+  transform: translate(-2px, -2px);
+}
+
+h3 {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
