@@ -18,26 +18,43 @@ export default function NewPlayerForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <lable>
-        Name:{" "}
-        <input
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />{" "}
-      </lable>
-      <lable>
-        Breed:{" "}
-        <input
-          value={breed}
-          onChange={(e) => {
-            setBreed(e.target.value);
-          }}
-        />
-      </lable>
-      <button type="submit">ADD</button>
-    </form>
+    <div className="add-pup-container">
+      <form onSubmit={handleSubmit}>
+        <div className="input-group">
+          <label>
+            <a>
+              <i class="fa-solid fa-tag"></i>
+              Name{" "}
+            </a>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />{" "}
+          </label>
+        </div>
+        <div className="input-group">
+          <label>
+            <a>
+              {" "}
+              <i class="fa-solid fa-dog"></i>
+              Breed{" "}
+            </a>
+            <input
+              type="text"
+              value={breed}
+              onChange={(e) => {
+                setBreed(e.target.value);
+              }}
+            />
+          </label>
+        </div>
+        <button className="add-button" type="submit">
+          ADD
+        </button>
+      </form>
+    </div>
   );
 }

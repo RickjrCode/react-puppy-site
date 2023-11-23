@@ -28,24 +28,26 @@ export default function AllPlayers() {
           <div className="player-card" key={index}>
             <h3>{player.name}</h3>
             <img src={player.imageUrl} alt={`picture of ${player.name}`} />
-            <button
-              className="players-button"
-              onClick={() => {
-                navigate(`/players/${player.id}`);
-              }}
-            >
-              <i class="fa-solid fa-bone"></i> See Details
-            </button>
+            <div className="button-container">
+              <button
+                className="players-button"
+                onClick={() => {
+                  navigate(`/players/${player.id}`);
+                }}
+              >
+                See Details
+              </button>
 
-            <button
-              className="players-button"
-              onClick={async () => {
-                await removePlayer(player.id);
-                await getPlayers();
-              }}
-            >
-              <i class="fa-solid fa-trash"></i> Remove Player from Roster
-            </button>
+              <button
+                className="players-button"
+                onClick={async () => {
+                  await removePlayer(player.id);
+                  await getPlayers();
+                }}
+              >
+                <i class="fa-solid fa-trash"></i> Remove Player from Roster
+              </button>
+            </div>
           </div>
         );
       })}
