@@ -1,3 +1,50 @@
+#nav-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(puppy-ball.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 90px;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+
+ul li {
+  font-size: 20px;
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+ul li::before {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  width: 100%;
+}
+
 #players-container {
   display: flex;
   flex-direction: row;
@@ -14,6 +61,7 @@
   padding: 1em;
   border: 2px solid black;
   border-radius: 20px;
+  box-shadow: 16px 19px 6px 5px rgba(0, 0, 0, 0.1);
 }
 
 .player-card:hover {
@@ -25,6 +73,7 @@
 
 .player-card img {
   width: 100%;
+  border: 2px solid black;
   border-radius: 20px;
 }
 
@@ -35,7 +84,9 @@
 }
 
 #single-player {
-  width: 40%;
+  background-color: #0f172a;
+  color: white;
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin: 1em;
@@ -43,6 +94,9 @@
   border: 2px solid black;
   border-radius: 20px;
   text-align: center;
+  font-weight: bold;
+  font-family: "Anton" sans-serif;
+  box-shadow: 16px 19px 6px 5px rgba(0, 0, 0, 0.1);
 }
 
 #single-player img {
@@ -52,6 +106,7 @@
 
 .players-button {
   border-radius: 20px;
+  padding: 10px 0;
   margin-top: 10px;
   font-weight: bold;
   font-family: monospace;
@@ -66,9 +121,77 @@
   transform: translate(-2px, -2px);
 }
 
+.details-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 20px;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  border: 2px solid #0f172a;
+  box-shadow: 2px 2px 0 0 white, 4px 4px 0 0 #0f172a;
+  transition-duration: 200ms;
+}
+
 h3 {
   font-size: 2em;
+  font-family: "Anton", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*style for New Player Form*/
+
+.add-pup-container {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 15px;
+}
+
+a {
+  font-size: 25px;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #0f172a;
 }
